@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "406629224438",
+    "firebase_url": "https://cinemasgv-default-rtdb.firebaseio.com",
+    "project_id": "cinemasgv",
+    "storage_bucket": "cinemasgv.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406629224438:android:46b60dfb7968ff3e3301d7",
+        "android_client_info": {
+          "package_name": "com.example.cinemasgv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe_0EI2E3f2WqgH3eI7HpChJwuf8Ur34A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406629224438:android:2752bdbd3410049a3301d7",
+        "android_client_info": {
+          "package_name": "vn.edu.tdc.cinemasgv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe_0EI2E3f2WqgH3eI7HpChJwuf8Ur34A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

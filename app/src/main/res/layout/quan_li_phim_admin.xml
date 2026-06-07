@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F8F7FA"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:text="Quản lý phim"
+            android:textColor="#E91E63"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mã phim"
+                            android:textColor="#555555"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/edtMaPhim"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="MP001"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tên phim"
+                            android:textColor="#555555"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/edtTenPhim"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="Nhập tên phim"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Mô tả"
+                    android:textColor="#555555"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/edtMoTa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="top"
+                    android:hint="Tóm tắt..."
+                    android:padding="8dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Thể loại"
+                    android:textColor="#555555"
+                    android:textSize="11sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupTheLoai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:chipSpacingHorizontal="4dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTheLoai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#009688"
+                        android:textSize="16sp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Đạo diễn"
+                    android:textColor="#555555"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/edtDaoDien"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="top"
+                    android:hint="Đạo diễn 1, Đạo diễn 2..."
+                    android:padding="8dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Diễn viên"
+                    android:textColor="#555555"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/edtDienVien"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="top"
+                    android:hint="Diễn viên 1, Diễn viên 2..."
+                    android:padding="8dp"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thời lượng"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/edtThoiLuong"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/bg_edittext"
+                            android:inputType="number"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày chiếu"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvNgayKhoiChieu"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/bg_edittext"
+                            android:drawableEnd="@drawable/ic_calendar"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp"
+                            android:text="dd/mm/yyyy"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Độ tuổi"
+                            android:textColor="#555555"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/edtTuoi"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="16"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Đánh giá"
+                            android:textColor="#555555"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/edtDanhGia"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="9.0"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ngôn ngữ"
+                            android:textColor="#555555"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/edtNgonNgu"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="Tiếng Việt "
+                            android:paddingHorizontal="8dp"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="URL Ảnh Poster"
+                    android:textColor="#555555"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/edtUrlAnh"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="https://..."
+                    android:paddingHorizontal="8dp"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvLabelStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Trạng thái phát hành"
+                        android:textSize="13sp" />
+
+                    <Switch
+                        android:id="@+id/swTrangThai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvLabelLike"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yêu thích"
+                        android:textSize="13sp" />
+
+                    <Switch
+                        android:id="@+id/swYeuThich"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnThem"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#3F51B5"
+                        android:drawableLeft="@drawable/ic_add_movie"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="THÊM"
+                        android:textSize="12sp" />
+
+                    <Space
+                        android:layout_width="4dp"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btnSua"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#009688"
+                        android:drawableLeft="@drawable/ic_movie_edit"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="SỬA"
+                        android:textSize="12sp" />
+
+                    <Space
+                        android:layout_width="4dp"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btnLamMoi"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#F44336"
+                        android:drawableLeft="@drawable/ic_reset_settings"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="RESET"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvListTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:text="— Danh sách phim —"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDanhSachPhim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:listitem="@layout/item_phim_admin"
+                android:minHeight="300dp"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
